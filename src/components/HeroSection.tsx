@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
+
   const scrollToForm = () => {
     document.getElementById("apply")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -22,7 +25,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6 }}
           className="font-mono text-sm tracking-[0.3em] uppercase text-primary mb-8"
         >
-          Private Kambo Retreat • Limassol, Cyprus
+          {t("hero.eyebrow")}
         </motion.p>
 
         <motion.h1
@@ -31,9 +34,9 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8"
         >
-          Everyone thinks you're living the dream island life.{" "}
+          {t("hero.headline1")}{" "}
           <span className="text-gradient-amber">
-            But you've forgotten what it feels like to actually breathe.
+            {t("hero.headline2")}
           </span>
         </motion.h1>
 
@@ -43,8 +46,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          Stop trying to fix a burnt-out body with mindset podcasts. Go through
-          a radical cellular cleanse and get your baseline energy back in 1 day.
+          {t("hero.subhead")}
         </motion.p>
 
         <motion.button
@@ -54,7 +56,7 @@ const HeroSection = () => {
           onClick={scrollToForm}
           className="bg-primary text-primary-foreground font-heading font-semibold text-lg px-10 py-4 hover:brightness-110 transition-all border-glow"
         >
-          Drop the dead weight
+          {t("hero.cta")}
         </motion.button>
       </div>
     </section>

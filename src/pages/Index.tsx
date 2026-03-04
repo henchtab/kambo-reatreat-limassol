@@ -6,26 +6,31 @@ import WhySection from "@/components/WhySection";
 import ResultsSection from "@/components/ResultsSection";
 import WhoSection from "@/components/WhoSection";
 import ContactSection from "@/components/ContactSection";
+import LanguageToggle from "@/components/LanguageToggle";
+import { LanguageProvider } from "@/i18n/LanguageContext";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      <HeroSection />
-      <div className="section-divider" />
-      <OfferSection />
-      <div className="section-divider" />
-      <SegmentationSection />
-      <div className="section-divider" />
-      <WhatItIsSection />
-      <div className="section-divider" />
-      <WhySection />
-      <div className="section-divider" />
-      <ResultsSection />
-      <div className="section-divider" />
-      <WhoSection />
-      <div className="section-divider" />
-      <ContactSection />
-    </main>
+    <LanguageProvider>
+      <LanguageToggle />
+      <main className="min-h-screen bg-background">
+        <HeroSection />
+        <div className="section-divider" />
+        <OfferSection />
+        <div className="section-divider" />
+        <SegmentationSection />
+        <div className="section-divider" />
+        <WhatItIsSection />
+        <div className="section-divider" />
+        <WhySection />
+        <div className="section-divider" />
+        <ResultsSection />
+        <div className="section-divider" />
+        <WhoSection />
+        <div className="section-divider" />
+        <ContactSection />
+      </main>
+    </LanguageProvider>
   );
 };
 
